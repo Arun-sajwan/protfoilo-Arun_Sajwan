@@ -1,183 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arun Sajwan | Portfolio</title>
-  <link rel="shortcut icon" href="portfolio-icon.png" type="image/x-icon">
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9fafb; color: #1f2937; }
-    header { background: #ffffff; padding: 15px 20px; position: sticky; top: 0; border-bottom: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; }
-    header a { margin-left: 15px; text-decoration: none; color: #1f2937; font-weight: bold; }
-    header a:hover { text-decoration: underline; }
-    section { max-width: 1000px; margin: auto; padding: 40px 20px; }
-    h1, h2 { color: #111827; }
-    h1 { font-size: 2.5rem; margin-bottom: 10px; }
-    h2 { font-size: 2rem; margin-bottom: 20px; }
-    p { margin-bottom: 15px; line-height: 1.6; }
-    .projects, .skills, .experience { display: grid; gap: 20px; }
-    .card { background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    .tags span { display: inline-block; margin: 3px; padding: 5px 10px; border: 1px solid #ccc; border-radius: 20px; font-size: 0.8rem; }
-    .contact a { display: inline-block; margin: 10px 10px 0 0; padding: 10px 15px; border-radius: 8px; background: #2563eb; color: white; text-decoration: none; }
-    .contact a:hover { background: #1d4ed8; }
-    footer { text-align: center; padding: 20px; font-size: 0.9rem; border-top: 1px solid #ddd; background: #fff; }
-    .projects .card a {
-      color: inherit;
-      text-decoration: none;
-    }
-    .projects .card a:hover {
-      text-decoration: none;
-      color: #246cd6; /* Optional: keep hover effect blue, or remove this line */
-    }
-
-    /* Dark theme styles */
-    body.dark {
-      background: #1e293b;
-      color: #e2e8f0;
-    }
-    body.dark header,
-    body.dark footer {
-      background: #0f172a;
-      color: #e2e8f0;
-      border-color: #334155;
-    }
-    body.dark .card {
-      background: #1e293b;
-      color: #e2e8f0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    }
-    body.dark .tags span {
-      border-color: #334155;
-      background: #334155;
-      color: #e2e8f0;
-    }
-    body.dark .contact a {
-      background: #64748b;
-      color: #fff;
-    }
-    body.dark .contact a:hover {
-      background: #475569;
-    }
-    body.dark h1,
-    body.dark h2,
-    body.dark h3 {
-      color: #e2e8f0;
-    }
-    body.dark a{
-      color: #e2e8f0;
-    }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>PortFolio|Arun sajwan</title>
 </head>
 <body>
-  <header>
-    <div><img src="portfolio-icon.png" alt="Portfolio Icon" style="height: 40px;"></div>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    <button id="themeToggle" style="margin-left:20px;padding:8px 14px;border-radius:8px;border:none;background:#2563eb;color:#fff;font-weight:bold;cursor:pointer;">
-      🌙 Dark
-    </button>
-     </nav>
-  </header>
+    <div class="container active" id="container">
+        <header class="header">
+            <a href="#" class="logo">Arun Sajwan</a>
 
-  <section id="home">
-    <h1>Hi, I'm Arun Sajwan</h1>
-    <p><strong>Web Developer • Student</strong></p>
-    <p>4th-year B.Tech student with hands-on experience in HTML, CSS, JavaScript and APIs. Built projects during internship: resume page, landing page, form validation, portfolio, and a weather app.</p>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="card">
-        <a href="Resume.html"><h3>Personal Resume Page</h3></a>
-        <p>A responsive resume webpage with clean sections for education, skills, and projects.</p>
-        <div class="tags"><span>HTML</span><span>CSS</span></div>
-      </div>
-      <div class="card">
-        <a href="landing page.html"><h3>Landing Page</h3></a>
-        <p>Modern landing page with hero, features, and CTA.</p>
-        <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
-      </div>
-      <div class="card">
-        <a href="form.html"><h3>Form Validation</h3></a>
-        <p>Email and password validation using JavaScript.</p>
-        <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
-      </div>
-      <div class="card">
-        <a href="weather.html"><h3>Weather App</h3></a>
-        <p>Weather search using API with dynamic UI.</p>
-        <div class="tags"><span>JS</span><span>API</span><span>JSON</span></div>
-      </div>
-      <div class="card">
-        <a href="index.html"><h3>Portfolio Website</h3></a>
-        <p>This website showcasing my projects and skills.</p>
-        <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
-      </div>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="Resume.html">About</a>
+                <a href="landing page.html">Skills</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="form.html">Contact</a>
+            </nav>
+            <div class="toggle-icon">
+                   <i class="fa-regular fa-moon"></i>
+            </div>
+        </header>
+        <section class="home">
+            <div class="home-content">
+                <h3>Hello,It's Me</h3>
+                <h1>Arun Sajwan</h1>
+                <h3>And I'm a <span>web Developer</span></h3>
+                <p>
+                Hi, I'm Arun — Computer Science Student & Aspiring AI Developer
+                I build small projects, web apps, and learn AI concepts. Currently studying Computer Science Engineering and following an AI syllabus (search, logic, probabilistic reasoning, neural networks)
+                <br> I enjoy learning AI, building small web apps, and solving algorithmic problems. I make simple, practical projects that I can host and show.
+                </p>
+                <div class="social-media">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="Resume.html" class="btn">Download CV</a>
+            </div>
+            <div class="home-img">
+                <img src="portfolio-icon.png" alt="img">
+            </div>
+        </section>
     </div>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="card">HTML5 – Advanced</div>
-      <div class="card">CSS3 – Intermediate</div>
-      <div class="card">JavaScript – Intermediate</div>
-      <div class="card">REST APIs – Intermediate</div>
-      <div class="card">Git & GitHub – Beginner+</div>
-    </div>
-  </section>
-
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="experience">
-      <div class="card">
-        <h3>Web Development Intern</h3>
-        <p><em>AICTE-approved Internship, 2025</em></p>
-        <ul>
-          <li>Built multiple mini-projects and a weather app using API integration.</li>
-          <li>Improved problem-solving via real-world tasks.</li>
-          <li>Collaborated on assignments using GitHub.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact">
-      <a href="mailto:youremail@example.com">Email</a>
-      <a href="https://github.com/" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 Arun Sajwan. All rights reserved.</p>
-  </footer>
-
-  <script>
-  const themeToggle = document.getElementById('themeToggle');
-  const body = document.body;
-
-  // Load theme from localStorage
-  if(localStorage.getItem('theme') === 'dark') {
-    body.classList.add('dark');
-    themeToggle.textContent = '☀️ Light';
-  }
-
-  themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark');
-    if(body.classList.contains('dark')) {
-      themeToggle.textContent = '☀️ Light';
-      localStorage.setItem('theme', 'dark');
-    } else {
-      themeToggle.textContent = '🌙 Dark';
-      localStorage.setItem('theme', 'light');
-    }
-  });
-</script>
+    <script src="https://kit.fontawesome.com/6840300d42.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 </html>
